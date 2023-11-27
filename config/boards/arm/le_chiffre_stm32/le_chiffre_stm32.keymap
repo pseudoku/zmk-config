@@ -159,13 +159,13 @@
       // Modifiers
 			combo_lsft {
 			    timeout-ms = <50>;
-		            key-positions = <10 11>;
+		            key-positions = <11 12>;
 		            bindings = <&skq LSHFT>;
 			};
 
 			combo_rsft {
 			    timeout-ms = <50>;
-		            key-positions = <16 17>;
+		            key-positions = <17 18>;
 		            bindings = <&skq RSHFT>;
 			};
 			combo_lalt {
@@ -181,12 +181,12 @@
 		  combo_lctl {
 			    timeout-ms = <50>;
 		            key-positions = <21 22 23>;
-		            bindings = <&kp LALT>;
+		            bindings = <&kp LCTL>;
 			};
 		  combo_rctl {
 			    timeout-ms = <50>;
 		            key-positions = <26 27 28>;
-		            bindings = <&kp RALT>;
+		            bindings = <&kp RCTL>;
 			};
 			combo_laltctl {
 			    timeout-ms = <50>;
@@ -201,12 +201,12 @@
 		  combo_lgui {
 			    timeout-ms = <50>;
 		            key-positions = <21 22 24>;
-		            bindings = <&kp LALT>;
+		            bindings = <&kp LGUI>;
 			};
 		  combo_rgui {
 			    timeout-ms = <50>;
 		            key-positions = <25 27 28>;
-		            bindings = <&kp RALT>;
+		            bindings = <&kp RGUI>;
 			};
       	//HYP MEH
 
@@ -329,7 +329,7 @@
             bindings = <
                 &kp Q &kp W  &kp F &kp P     &kp B         &kp J      &kp L     &kp U      &kp Y   &kp SEMI
                 &kp A &kp R  &kp S &kp T     &kp G         &kp K      &kp N     &kp E      &kp I   &kp SEMI
-                &kp A &kp X  &kp C &kp V     &key_repeat   &kp M      &kp M     &kp COMMA  &kp DOT &kp O
+                &kp A &kp X  &kp C &kp D     &key_repeat   &kp M      &kp M     &kp COMMA  &kp DOT &kp O
                                    &mo NAV_L &kp SPACE     &kp LSHFT  &mo NAV_L
             >;
         };

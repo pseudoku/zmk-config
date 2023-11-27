@@ -25,3 +25,6 @@ CONFIG_HEAP_MEM_POOL_SIZE=1024
 
 # clock configuration
 CONFIG_CLOCK_CONTROL=y
+
+# Combo configuration
+CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY 9
