@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define NAV_L 1
+
+// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
+&lt { quick_tap_ms = <200>; };
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+			combo_esc1 {
+			    timeout-ms = <50>;
+		            key-positions = <11 12 20>;
+		            bindings = <&kp ESCAPE>;
+			};
+			combo_esc2 {
+			    timeout-ms = <50>;
+		            key-positions = <17 18 29>;
+		            bindings = <&kp ESCAPE>;
+			};
+
+			combo_lsft {
+			    timeout-ms = <50>;
+		            key-positions = <10 11>;
+		            bindings = <&skq LSHFT>;
+			};
+
+			combo_rsft {
+			    timeout-ms = <50>;
+		            key-positions = <16 17>;
+		            bindings = <&skq RSHFT>;
+			};
+    };
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp Q &kp W  &kp F &kp P     &kp B         &kp J      &kp L     &kp U      &kp Y   &kp SEMI
+                &kp A &kp R  &kp S &kp T     &kp G         &kp K      &hm N     &kp E      &kp I   &kp SEMI
+                &kp A &kp X  &kp C &kp V     &key_repeat   &kp M      &kp M     &kp COMMA  &kp DOT &kp O
+                                   &mo NAV_L &kp SPACE     &kp LSHFT  &mo NAV_L
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+                &kp LNLCK  &kp KP_N7 &kp KP_N8 &kp KP_N9  &kp SPC         &kp F11 &kp F12  &trans  &trans &trans
+                &trans     &kp KP_N4 &kp KP_N5 &kp KP_N4  &kp KP_COMMA     &kp F1  &kp F2  &kp F3  &kp F4 &kp F5
+                &kp KP_N0  &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_DOT       &kp F6  &kp F7  &kp F8  &kp F9 &kp F10
+                                               &trans     &trans          &trans        &trans
+            >;
+        };
+    };
+};
