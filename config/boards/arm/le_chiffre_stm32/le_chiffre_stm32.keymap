@@ -94,7 +94,7 @@
 		            bindings = <&kp UP>;
 			};
 			combo_down_L {
-			    timeout-ms = <50>n;
+			    timeout-ms = <50>;
 		            key-positions = <11 12 23>;
 		            bindings = <&kp DOWN>;
 			};
