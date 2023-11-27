@@ -71,12 +71,12 @@
 		            bindings = <&kp DELETE>;
 			};
 
-						combo_bspc_L {
+			combo_pscrn {
 			    timeout-ms = <50>;
-		            key-positions = <13 14>;
-		            bindings = <&kp BACKSPACE>;
+		            key-positions = <3 4>;
+		            bindings = <&kp PSCRN>;
 			};
-			combo_ins_R {
+			combo_ins {
 			    timeout-ms = <50>;
 		            key-positions = <5 6>;
 		            bindings = <&kp INSERT>;
