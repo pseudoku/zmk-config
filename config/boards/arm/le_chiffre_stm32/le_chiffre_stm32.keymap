@@ -126,13 +126,13 @@
 			};
 			combo_left_L {
 			    timeout-ms = <50>;
-		            key-positions = <10 1 2>;
-		            bindings = <&kp RIGHT>;
+		            key-positions = <10 11 12>;
+		            bindings = <&kp LEFT>;
 			};
 		  combo_left_R {
 			    timeout-ms = <50>;
 		            key-positions = <7 8 19>;
-		            bindings = <&kp RIGHT>;
+		            bindings = <&kp LEFT>;
 			};
 			combo_home_L {
 			    timeout-ms = <50>;
@@ -321,23 +321,29 @@
 		            key-positions = <18 28>;
 		            bindings = <&kp N8>;
 			};
-    };
-    keymap {
+      combo_reset {
+			    timeout-ms =<50>;
+								key-positions =< 30 31 32 33>;
+								bindings = <&sys_reset>;
+			};
+		};
+
+	  keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                &kp Q &kp W  &kp F &kp P     &kp B         &kp J      &kp L     &kp U      &kp Y   &kp SEMI
-                &kp A &kp R  &kp S &kp T     &kp G         &kp K      &kp N     &kp E      &kp I   &kp SEMI
-                &kp A &kp X  &kp C &kp D     &key_repeat   &kp M      &kp M     &kp COMMA  &kp DOT &kp O
-                                   &mo NAV_L &kp SPACE     &kp LSHFT  &mo NAV_L
+                &kp Q     &kp W  &kp F &kp P  &kp B         &kp J      &kp L     &kp U      &kp Y   &kp SEMI
+                &kp K_APP &kp R  &kp S &kp T  &kp G         &kp K      &kp N     &kp E      &kp I   &caps_word
+                &kp A     &kp X  &kp C &kp D  &key_repeat   &kp M      &kp M     &kp COMMA  &kp DOT &kp O
+                                   &mo NAV_L  &kp SPACE     &kp LSHFT  &mo NAV_L
             >;
         };
 
         nav_layer {
             bindings = <
                 &kp LNLCK  &kp KP_N7 &kp KP_N8 &kp KP_N9  &kp SPC         &kp F11 &kp F12  &trans  &trans &trans
-                &trans     &kp KP_N4 &kp KP_N5 &kp KP_N4  &kp KP_COMMA     &kp F1  &kp F2  &kp F3  &kp F4 &kp F5
+                &trans     &kp KP_N4 &kp KP_N5 &kp KP_N4  &kp COMMA        &kp F1  &kp F2  &kp F3  &kp F4 &kp F5
                 &kp KP_N0  &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_DOT       &kp F6  &kp F7  &kp F8  &kp F9 &kp F10
                                                &trans     &trans          &trans        &trans
             >;
