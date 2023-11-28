@@ -154,6 +154,29 @@
 		            key-positions = <6 7 8 19>;
 		            bindings = <&kp END>;
 			};
+
+		  combo_pgup_R {
+			    timeout-ms = <50>;
+		            key-positions = <5 7 8>;
+		            bindings = <&kp PG_UP>;
+			};
+		  combo_pgdn_R {
+			    timeout-ms = <50>;
+		            key-positions = <6 7 8>;
+		            bindings = <&kp PG_DN>;
+			};
+			combo_cut {
+			    timeout-ms = <50>;
+		            key-positions = <1 2 3>;
+		            bindings = <&kp LC(X)>;
+			};
+
+			combo_paste {
+			    timeout-ms = <50>;
+		            key-positions = <1 2 4>;
+		            bindings = <&kp LC(V)>;
+			};
+
       	//PGDN PGUP
 
       // Modifiers
@@ -241,10 +264,10 @@
 		            key-positions = <28 29>;
 		            bindings = <&kp FSLH>;
 			};
-			combo_lbrc {
+			combo_lbkt {
 			    timeout-ms = <50>;
 		            key-positions = <1 11>;
-		            bindings = <&kp LBRC>;
+		            bindings = <&kp LBKT>;
 			};
 			combo_mins {
 			    timeout-ms = <50>;
@@ -276,10 +299,10 @@
 		            key-positions = <7 17>;
 		            bindings = <&kp EQUAL>;
 			};
-		  combo_rbrc {
+		  combo_rbkt {
 			    timeout-ms = <50>;
 		            key-positions = <8 18>;
-		            bindings = <&kp RBRC>;
+		            bindings = <&kp RBKT>;
 			};
 			combo_one {
 			    timeout-ms = <50>;
@@ -335,7 +358,7 @@
             bindings = <
                 &kp Q     &kp W  &kp F &kp P  &kp B         &kp J      &kp L     &kp U      &kp Y   &kp SEMI
                 &kp K_APP &kp R  &kp S &kp T  &kp G         &kp K      &kp N     &kp E      &kp I   &caps_word
-                &kp A     &kp X  &kp C &kp D  &key_repeat   &kp M      &kp M     &kp COMMA  &kp DOT &kp O
+                &kp A     &kp X  &kp C &kp D  &key_repeat   &kp M      &kp H     &kp COMMA  &kp DOT &kp O
                                    &mo NAV_L  &kp SPACE     &kp LSHFT  &mo NAV_L
             >;
         };
