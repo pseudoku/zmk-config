@@ -134,20 +134,10 @@
 		            key-positions = <7 8 19>;
 		            bindings = <&kp LEFT>;
 			};
-			combo_home_L {
-			    timeout-ms = <50>;
-		            key-positions = <10 1 2 3>;
-		            bindings = <&kp HOME>;
-			};
 		  combo_home_R {
 			    timeout-ms = <50>;
 		            key-positions = <5 7 8 19>;
 		            bindings = <&kp HOME>;
-			};
-			combo_end_L {
-			    timeout-ms = <50>;
-		            key-positions = <10 1 2 4>;
-		            bindings = <&kp END>;
 			};
 		  combo_end_R {
 			    timeout-ms = <50>;
@@ -164,17 +154,6 @@
 			    timeout-ms = <50>;
 		            key-positions = <6 7 8>;
 		            bindings = <&kp PG_DN>;
-			};
-			combo_cut {
-			    timeout-ms = <50>;
-		            key-positions = <1 2 3>;
-		            bindings = <&kp LC(X)>;
-			};
-
-			combo_paste {
-			    timeout-ms = <50>;
-		            key-positions = <1 2 4>;
-		            bindings = <&kp LC(V)>;
 			};
 
       	//PGDN PGUP
