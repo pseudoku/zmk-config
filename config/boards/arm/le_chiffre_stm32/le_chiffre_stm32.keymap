@@ -96,64 +96,75 @@
       //Navigation
 			combo_up_L {
 			    timeout-ms = <50>;
-		            key-positions = <1 2 13>;
+		            key-positions = <1 2>;
 		            bindings = <&kp UP>;
 			};
 		  combo_up_R {
 			    timeout-ms = <50>;
-		            key-positions = <7 8 16>;
+		            key-positions = <7 8>;
 		            bindings = <&kp UP>;
 			};
 			combo_down_L {
 			    timeout-ms = <50>;
-		            key-positions = <11 12 23>;
+		            key-positions = <10 13>;
 		            bindings = <&kp DOWN>;
 			};
 		  combo_down_R {
 			    timeout-ms = <50>;
-		            key-positions = <17 18 26>;
+		            key-positions = <16 19>;
 		            bindings = <&kp DOWN>;
 			};
 			combo_right_L {
 			    timeout-ms = <50>;
-		            key-positions = <1 2 10>;
+		            key-positions = <10 14>;
 		            bindings = <&kp RIGHT>;
 			};
 		  combo_right_R {
 			    timeout-ms = <50>;
-		            key-positions = <17 18 19>;
+		            key-positions = <19 29>;
 		            bindings = <&kp RIGHT>;
 			};
 			combo_left_L {
 			    timeout-ms = <50>;
-		            key-positions = <10 11 12>;
+		            key-positions = <10 20>;
 		            bindings = <&kp LEFT>;
 			};
 		  combo_left_R {
 			    timeout-ms = <50>;
-		            key-positions = <7 8 19>;
+		            key-positions = <15 19>;
 		            bindings = <&kp LEFT>;
 			};
 		  combo_home_R {
 			    timeout-ms = <50>;
-		            key-positions = <5 7 8 19>;
+		            key-positions = <5 19>;
 		            bindings = <&kp HOME>;
 			};
-		  combo_end_R {
+		  combo_end_L {
 			    timeout-ms = <50>;
-		            key-positions = <6 7 8 19>;
+		            key-positions = <4 10>;
 		            bindings = <&kp END>;
 			};
 
 		  combo_pgup_R {
 			    timeout-ms = <50>;
-		            key-positions = <5 7 8>;
+		            key-positions = <6 7 8>;
 		            bindings = <&kp PG_UP>;
 			};
 		  combo_pgdn_R {
 			    timeout-ms = <50>;
-		            key-positions = <6 7 8>;
+		            key-positions = <6 19>;
 		            bindings = <&kp PG_DN>;
+			};
+
+		  combo_copy_L {
+			    timeout-ms = <50>;
+		            key-positions = <1 2 4>;
+		            bindings = <&kp LC(C)>;
+			};
+		  combo_paste_L {
+			    timeout-ms = <50>;
+		            key-positions = <1 2 3>;
+		            bindings = <&kp LC(V)>;
 			};
 
       	//PGDN PGUP
@@ -192,12 +203,12 @@
 			};
 			combo_laltctl {
 			    timeout-ms = <50>;
-		            key-positions = <20 21 22 23>;
+		            key-positions = <20 24>;
 		            bindings = <&kp LA(LCTL)>;
 			};
 		  combo_raltctl {
 			    timeout-ms = <50>;
-		            key-positions = <26 27 28 29>;
+		            key-positions = <25 29>;
 		            bindings = <&kp RA(RCTL)>;
 			};
 		  combo_lgui {
@@ -335,19 +346,19 @@
 
         default_layer {
             bindings = <
-                &kp Q     &kp W  &kp F &kp P  &kp B         &kp J      &kp L     &kp U      &kp Y   &kp SEMI
-                &kp K_APP &kp R  &kp S &kp T  &kp G         &kp K      &kp N     &kp E      &kp I   &caps_word
-                &kp A     &kp X  &kp C &kp D  &key_repeat   &kp M      &kp H     &kp COMMA  &kp DOT &kp O
-                                   &mo NAV_L  &kp SPACE     &kp LSHFT  &mo NAV_L
+                &none     &kp W  &kp F &kp P  &kp B         &kp J       &kp L     &kp U      &kp Y   &none
+                &kp K_APP &kp S  &kp T &kp H  &kp K         &kp X       &kp N     &kp A      &kp I   &caps_word
+                &kp R     &kp C  &kp G &kp D  &key_repeat   &key_repeat &kp M     &kp COMMA  &kp DOT &kp O
+                                   &mo NAV_L  &kp SPACE     &kp E       &kp RSHFT
             >;
         };
 
         nav_layer {
             bindings = <
-                &kp LNLCK  &kp KP_N7 &kp KP_N8 &kp KP_N9  &kp SPC         &kp F11 &kp F12  &trans  &trans &trans
-                &trans     &kp KP_N4 &kp KP_N5 &kp KP_N4  &kp COMMA        &kp F1  &kp F2  &kp F3  &kp F4 &kp F5
-                &kp KP_N0  &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_DOT       &kp F6  &kp F7  &kp F8  &kp F9 &kp F10
-                                               &trans     &trans          &trans        &trans
+                &trans     &kp KP_N7 &kp KP_N8 &kp KP_N9  &kp SPC         &kp F11 &kp F12 &trans  &trans &trans
+                &kp LNLCK  &kp KP_N4 &kp KP_N5 &kp KP_N6  &kp COMMA       &kp F1  &kp F2  &kp F3  &kp F4 &kp F5
+                &kp KP_N0  &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_DOT      &kp F6  &kp F7  &kp F8  &kp F9 &kp F10
+                                               &trans     &trans          &kp SPACE  &trans
             >;
         };
     };
