@@ -117,7 +117,7 @@
 			combo_right_L {
 			    timeout-ms = <50>;
 		            key-positions = <14 20>;
-		            bindings = <&kp RIGHT>;x
+		            bindings = <&kp RIGHT>;
 			};
 		  combo_right_R {
 			    timeout-ms = <50>;
